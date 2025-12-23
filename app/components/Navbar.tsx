@@ -41,7 +41,7 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<Link href="https://github.com/omunite215">
+					<Link href="https://github.com/NicoleThiessen">
 						<Image
 							src="/logo.png"
 							width={80}
@@ -52,7 +52,7 @@ const Navbar = () => {
 						/>
 					</Link>
 					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-						Om &nbsp; <span className="sm:block hidden ">| omunite215</span>
+						Nicole &nbsp; <span className="sm:block hidden ">| Mechtronics</span>
 					</p>
 				</div>
 

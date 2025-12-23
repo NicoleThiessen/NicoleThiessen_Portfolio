@@ -4,6 +4,10 @@ export const navLinks = [
 		title: "About",
 	},
 	{
+		id: "projects",
+		title: "Projects",
+	},
+	{
 		id: "work",
 		title: "Work",
 	},
@@ -15,115 +19,89 @@ export const navLinks = [
 
 const services = [
 	{
-		title: "UI/UX Designer",
-		icon: "/backend.webp",
+		title: "Mechatronics",
+		icon: "/hand1.png",
 	},
 	{
-		title: "Full Stack Web Developer",
-		icon: "/web.webp",
+		title: "AI and Neural Networks",
+		icon: "/ai.png",
 	},
 	{
-		title: "App Developer",
-		icon: "/mobile.webp",
+		title: "Solidworks",
+		icon: "/solid.png",
 	},
 	{
-		title: "Software Engineer",
-		icon: "/creator.webp",
+		title: "Batteries",
+		icon: "/battery.png",
 	},
 ];
 
 const technologies = [
 	{
-		name: "HTML 5",
-		icon: "/tech/html.webp",
+		name: "Solidworks",
+		icon: "/tech/solid.png",
 	},
 	{
-		name: "CSS 3",
-		icon: "/tech/css.webp",
+		name: "C++",
+		icon: "/tech/C++.png",
 	},
 	{
-		name: "JavaScript",
+		name: "Python",
+		icon: "/tech/python.png",
+	},
+	{
+		name: "AutoCAD",
+		icon: "/tech/autocad.png",
+	},
+	{
+		name: "Javascript",
 		icon: "/tech/javascript.webp",
 	},
 	{
-		name: "TypeScript",
-		icon: "/tech/typescript.webp",
+		name: "Simscale",
+		icon: "/tech/simscale.png",
 	},
 	{
-		name: "React JS",
-		icon: "/tech/reactjs.webp",
-	},
-	{
-		name: "Next.JS",
-		icon: "/tech/nextjs.svg",
-	},
-	{
-		name: "Redux Toolkit",
-		icon: "/tech/redux.webp",
-	},
-	{
-		name: "Tailwind CSS",
-		icon: "/tech/tailwind.webp",
-	},
-	{
-		name: "Three JS",
-		icon: "/tech/threejs.webp",
+		name: "OpenCV",
+		icon: "/tech/cv.png",
 	},
 	{
 		name: "git",
 		icon: "/tech/git.webp",
 	},
-	{
-		name: "figma",
-		icon: "/tech/figma.webp",
-	},
-	{
-		name: "wordpress",
-		icon: "/tech/wordpress.webp",
-	},
-	{
-		name: "bootstrap",
-		icon: "/tech/bootstrap.webp",
-	},
 ];
 
 const experiences = [
 	{
-		title: "Wordpress Developer & UI/UX Designer",
-		company_name: "A.V.M Auto",
-		icon: "/company/avm.webp",
-		iconBg: "#383E56",
-		date: "2020 -  2023",
+		title: "Technical Analysis and Intellectual Property Assessment Intern",
+		company_name: "Corecurrent Solutions Inc.",
+		icon: "/company/corecurrent.png",
+		iconBg: "#fbfcffff",
+		date: "July 2025 - August 2025",
 		points: [
-			"Self-Taught Expertise: Gained proficiency in WordPress and UI/UX design through independent learning.",
-			"Collaborative Design: Worked closely with stakeholders to gather feedback and iterate on the portfolio website's interactivity.",
-			"Successful Website Development: Designed and developed a visually appealing and user-friendly portfolio website using WordPress.",
-			"Positive Business Impact: Contributed to +54.25% sales and overall business growth through the improved website."
+			"Reverse engineered automotive electronic modules to identify patent infringements, accelerating legal evidence collection",
+			"Researched IC components, compiling findings into organized reports, improving accuracy in client cases",
+			"Built a Python OpenCV tool mapping chip images to their positions on the PCB, streamlining analysis workflows",
 		],
 	},
 	{
-		title: "Next.JS Developer",
-		company_name: "Sparkbright Engineering",
-		icon: "/company/sparkbright.webp",
+		title: "Sterilization Technician & Administrative Assistant",
+		company_name: "Kanata Periodontics",
+		icon: "/company/perio.webp",
 		iconBg: "#E6DEDD",
-		date: "2023 - 2024",
+		date: "June 2025 - August 2025",
 		points: [
-			"Self-Taught Expertise: Gained proficiency in React.JS and Next.JS through independent learning.",
-			"Successful Website Development: Designed and developed a visually appealing and user-friendly portfolio website using Next.JS.",
-			"Collaborative Design: Worked closely with stakeholders to gather feedback and iterate on the portfolio website's interactivity."
+			"Maintained sterilization equipment, prepped operation rooms, and assisted chairside with strong organization and attention to detail, easing staff workload and improving patient flow",
 		],
 	},
 	{
-		title: "Software Developer",
-		company_name: "Way to Web Pvt. Ltd.",
-		icon: "/company/wtw.jpg",
-		iconBg: "#E6DEDD",
-		date: "2024 - Present",
+		title: "Etsy Shop Founder & Owner",
+		company_name: "ClayRoomCo",
+		icon: "/company/etsy.png",
+		iconBg: "#ff6600ff",
+		date: "April 2022 - April 2025",
 		points: [
-			"Developing and maintaining Wordpress Site for A.V.M Auto The Car Body Shop based in Ahmedabad, Gujarat India.",
-			"Analyzing feedbacks and fixing bugs.",
-			"Search Engine Optimization.",
-			"Design Maintainence and hosting maintenance.",
+			"Launched and scaled an online shop for handcrafted figurines, achieving 100+ sales and $4,000+ revenue through creative design and marketing",
 		],
 	},
 ];
@@ -181,145 +159,139 @@ const projects :{
 	}[];
 	image: string;
 	source_code_link?: string;
-	deploy_link: string;
+	deploy_link?: string;
 	platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web"
 }[] = [
 	{
-		name: "A.V.M Auto Portfolio",
+		name: "Formula Electric Tractive Team (UWFE)",
 		description:
-			"A Designed and developed a visually appealing and user-friendly portfolio website using WordPress.",
+			"Member of the battery subteam. Gained experience prototyping, 3D printing, cell testing and pack designing.",
 		tags: [
 			{
-				name: "wordpress",
+				name: "Solidworks",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "google-translate",
+				name: "Battery design",
 				color: "green-text-gradient",
 			},
+			{
+				name: "Prototyping",
+				color: "blue-text-gradient",
+			},
 		],
-		image: "/projectimg/avm.webp",
-		platform: "Wordpress",
-		deploy_link: "https://avmauto.in/",
+		image: "/projectimg/DSC_0070.webp",
+		platform: "Vercel",
+		deploy_link: "https://www.uwfsae.ca/",
 	},
 	{
-		name: "Sparkbright Engineering Portfolio",
+		name: "UW Crowd - Hack the North",
 		description:
-			" Designed and developed a visually appealing and user-friendly portfolio website using Next.JS.",
+			"Developed real-time campus occupancy website using Raspberry Pis’ to scan for Bluetooth Low Energy signals, helping students plan around crowds",
 		tags: [
 			{
-				name: "next",
+				name: "Raspberry PI",
 				color: "red-text-gradient",
 			},
 			{
-				name: "Next UI",
+				name: "Javascript",
 				color: "orange-text-gradient",
 			},
 			{
-				name: "tailwind",
+				name: "Full Stack",
 				color: "blue-text-gradient",
 			},
 		],
-		image: "/projectimg/sparkbright.png",
-		source_code_link: "https://github.com/omunite215/React-Admin-DashBoard",
-		platform: "Web",
-		deploy_link: "https://sparkbright.in/",
-	},
-	{
-		name: "HooBank",
-		description:
-			"A responsive Bank HomePage showcasing different features such as various payment gateways integration, easy money transfer, advanced security, etc. It has a beautiful interface made using Tailwind CSS and React",
-		tags: [
-			{
-				name: "next",
-				color: "green-text-gradient",
-			},
-			{
-				name: "tailwind",
-				color: "blue-text-gradient",
-			},
-		],
-		image: "/projectimg/hoobank.webp",
-		source_code_link: "https://github.com/omunite215/hoobank",
+		image: "/projectimg/htn.JPG",
+		source_code_link: "https://github.com/NicoleThiessen/UWCrowd1",
 		platform: "Vercel",
-		deploy_link: "https://hoobankbyom.netlify.app/",
 	},
 	{
-		name: "MERN Dashboard",
+		name: "AI Voice Assistant",
 		description:
-			" Designed and developed a visually appealing and user-friendly Data Analytics Dashboard using MERN",
+			"Built an AI voice assistant using Whisper and LLM Dialogue, enabling real-time conversations. Modeled a 3D robot avatar that reacted to emotions, via a custom neural network mapping emotion metrics to joint angles, delivering human-like AI interaction.",
 		tags: [
 			{
-				name: "react",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "materialui",
-				color: "orange-text-gradient",
-			},
-			{
-				name: "MongoDB",
+				name: "LLM",
 				color: "green-text-gradient",
 			},
 			{
-				name: "Express",
+				name: "Neural Networks",
+				color: "blue-text-gradient",
+			},
+		],
+		image: "/projectimg/jarvis2.png",
+		source_code_link: "https://github.com/NicoleThiessen/JARVIS_emotionally_intelligent_virtual_assistant",
+		platform: "Vercel",
+		deploy_link: "https://www.youtube.com/watch?v=jCOez8E0fnw",
+	},
+	{
+		name: "Synthetic Data Generator",
+		description:
+			"Built a synthetic data generator to solve AI training data scarcity, with a pipeline that combines CTGAN generation and LLM enrichment to create large and flexible datasets.",
+		tags: [
+			{
+				name: "AI Training",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "Synthetic Data",
+				color: "orange-text-gradient",
+			},
+			{
+				name: "CTGAN",
+				color: "green-text-gradient",
+			},
+			{
+				name: "Python",
 				color: "pink-text-gradient",
 			},
 		],
-		image: "/projectimg/mern.png",
-		source_code_link: "https://github.com/omunite215/Project_MERN-Dashboard",
-		platform: "Web",
-		deploy_link: "https://admin-frontend-r705.onrender.com/",
+		image: "/projectimg/synthetic.png",
+		source_code_link: "https://github.com/NicoleThiessen/Smart-Data-Synthetic-Generator-for-Gen-AI-Hackathon",
+		platform: "Vercel",
+		deploy_link: "https://www.youtube.com/watch?v=baWmiI1C_vk",
 	},
 	{
-		name: "Metaverse Web 3.0",
+		name: "Baymax AI",
 		description:
-			"A Modern UI/UX Landing Page using Framer Motion and TailwindCSS with a feel and looks of Web 3.0",
+			"Built an AI-powered mental wellness chatbot website with a 3D interactive Baymax character; integrated LLM-based dialogue (Mistral 7B via OpenRouter API) and secure server-side API handling.",
 		tags: [
 			{
-				name: "react",
+				name: "LLM",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "tailwind",
+				name: "React",
 				color: "green-text-gradient",
 			},
-			{
-				name: "framer-motion",
-				color: "orange-text-gradient",
-			},
 		],
-		image: "/projectimg/metaverse.png",
-		source_code_link: "https://github.com/omunite215/Project_Metaverse",
+		image: "/projectimg/baymax.png",
+		source_code_link: "https://github.com/NicoleThiessen/Baymax---Bolt-Hackathon",
 		platform: "Vercel",
-		deploy_link: "https://project-metaverse-beta.vercel.app/",
+		deploy_link: "https://www.youtube.com/watch?v=ZRWdxQo-w40",
 	},
 	{
-		name: "Issue Tracker",
+		name: "IB Extended Essay",
 		description:
-			"A Next.JS Full Stack Issue Tracker made using Next.Js, ShadCN UI, Prisma, mySQL with latest features like Next.JS Server Components, and Serverless features.",
+			"Modeled and ran CFD simulations on 22 gliders in SolidWorks and SimScale, analyzing aerodynamic performance to quantify glide efficiency trends",
 		tags: [
 			{
-				name: "next",
+				name: "CFD Simulations",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "tailwind",
+				name: "Aerodynamics",
 				color: "green-text-gradient",
 			},
 			{
-				name: "shadCN",
+				name: "Report",
 				color: "orange-text-gradient",
 			},
-			{
-				name: "mySQL",
-				color: "green-text-gradient",
-			},
 		],
-		image: "/projectimg/issuetracker.png",
-		source_code_link: "https://github.com/omunite215/Project_Issue-Tracker",
+		image: "/projectimg/ee.png",
 		platform: "Vercel",
-		deploy_link: "https://project-issue-tracker.vercel.app/",
+		deploy_link: "https://docs.google.com/document/d/1OGTv2R9tIUioGpj1CzntGx-VZ7_ldNtkfAOxgAhq20c/edit?usp=sharing",
 	},
 ];
 

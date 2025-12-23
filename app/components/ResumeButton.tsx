@@ -5,7 +5,7 @@ import React from "react";
 const ResumeButton = () => {
 	return (
 		<Link
-			href="/resume/Resume.pdf"
+			href="/resume/ResumeA1_V3 (2).pdf"
 			target="_blank"
 			download
 		>

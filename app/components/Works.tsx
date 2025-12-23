@@ -18,7 +18,7 @@ type ProjectCardProps = {
 	}[];
 	image: string;
 	source_code_link?: string;
-	deploy_link: string;
+	deploy_link?: string;
 	platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web"
 };
 
@@ -65,7 +65,8 @@ const ProjectCard = ({
 								className="object-contain"
 							/>
 						</Link>}
-						<Link
+						{deploy_link && (
+  							<Link
 							href={deploy_link}
 							target="_blank"
 							className="black-gradient w-10 h-10 ml-2 rounded-full flex justify-center items-center cursor-pointer"
@@ -78,6 +79,7 @@ const ProjectCard = ({
 								className="object-contain"
 							/>
 						</Link>
+						)}
 					</div>
 				</div>
 
@@ -105,7 +107,7 @@ const Works = () => {
 	return (
 		<>
 			<motion.div variants={textVariant()}>
-				<p className="sectionSubText">My work</p>
+				<p className="sectionSubText">Things I have built</p>
 				<h2 className="sectionHeadText">Projects.</h2>
 			</motion.div>
 
@@ -114,11 +116,7 @@ const Works = () => {
 					variants={fadeIn("", "", 0.1, 1)}
 					className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
 				>
-					Following projects showcases my skills and experience through
-					real-world examples of my work. Each project is briefly described with
-					links to code repositories and live demos in it. It reflects my
-					ability to solve complex problems, work with different technologies,
-					and manage projects effectively.
+				The following projects showcase my ability to turn ideas into functional, real-world solutions. They reflect my interest in artificial intelligence, problem-solving, and building practical solutions, with brief descriptions and links to source code and live demos where available.
 				</motion.p>
 			</div>
 
@@ -131,4 +129,4 @@ const Works = () => {
 	);
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

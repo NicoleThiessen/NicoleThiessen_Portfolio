@@ -2,7 +2,6 @@ import {
 	About,
 	Contact,
 	Experience,
-	Feedbacks,
 	Hero,
 	Navbar,
 	Tech,
@@ -18,10 +17,9 @@ export default function Home() {
 				<Hero />
 			</div>
 			<About />
-			<Experience />
-			<Tech />
 			<Works />
-			<Feedbacks />
+			<Tech />
+			<Experience />
 			<div className="relative z-0">
 				<Contact />
 				<StarsCanvas />
