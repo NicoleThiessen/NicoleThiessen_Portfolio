@@ -11,7 +11,6 @@ const Contact = () => {
 
 	const [form, setForm] = useState({ name: "", email: "", message: "" });
 	const [loading, setLoading] = useState(false);
-	// "idle" | "success" | "error"
 	const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
 	const handleChange = (
@@ -28,8 +27,8 @@ const Contact = () => {
 
 		emailjs
 			.send(
-				"service_y366iq1",   // your EmailJS Service ID
-				"template_wci2gkt",  // your EmailJS Template ID
+				"service_y366iq1",
+				"template_wci2gkt",
 				{
 					from_name: form.name,
 					to_name: "Nicole Thiessen",
@@ -37,7 +36,7 @@ const Contact = () => {
 					to_email: "nicole.d.thiessen@gmail.com",
 					message: form.message,
 				},
-				"Avt5QfjJFc5zGGi_H", // your EmailJS Public Key
+				"Avt5QfjJFc5zGGi_H",
 			)
 			.then(() => {
 				setLoading(false);
@@ -72,7 +71,7 @@ const Contact = () => {
 							name="name"
 							value={form.name}
 							onChange={handleChange}
-							placeholder="What's your name?"
+							placeholder="What&apos;s your name?"
 							required
 							className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
 						/>
@@ -85,7 +84,7 @@ const Contact = () => {
 							name="email"
 							value={form.email}
 							onChange={handleChange}
-							placeholder="What's your email?"
+							placeholder="What&apos;s your email?"
 							required
 							className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
 						/>
@@ -113,12 +112,12 @@ const Contact = () => {
 							{loading ? "Sending..." : "Send"}
 						</button>
 
-						{/* Inline status messages — no jarring alert() popups */}
 						{status === "success" && (
 							<p className="text-[14px]" style={{ color: "#38ef7d" }}>
-								Message sent — I'll get back to you as soon as possible!
+								Message sent — I&apos;ll get back to you as soon as possible!
 							</p>
 						)}
+
 						{status === "error" && (
 							<p className="text-[14px]" style={{ color: "#fc6767" }}>
 								Something went wrong. Please try emailing me directly at{" "}
