@@ -54,7 +54,7 @@ const About = () => {
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
 			>
-			Mechatronics Engineering student at the University of Waterloo with a love for creative design challenges and climate-focused engineering projects. Somethings I love building include high voltage batteries, neural networks and race cars. I also enjoy taking cars apart, as my previous interships were in automotive hardware and CAN bus reverse engineering. My strengths lie in my creativity, my problem solving and my passion for learning and becoming a better engineer.
+			I’m a Mechatronics Engineering student at the University of Waterloo, focused on building systems that matter in the real world, especially in climate and energy. I enjoy working across hardware and software, whether that’s designing battery systems, experimenting with neural networks, or digging into how cars and embedded systems actually work. A lot of how I learn comes from taking things apart to understand how they function, then rebuilding or improving them in a more thoughtful way. Through internships in automotive hardware and CAN bus analysis, as well as hands-on design work in Formula Electric, I’ve developed a strong interest in how complex systems are built from the ground up. I’m drawn to problems where creative design and analytical thinking have to come together to turn complexity into something that actually works.
 			
 			</motion.p>
 			{/*
