@@ -9,28 +9,27 @@ import { EarthCanvas } from "./canvas";
 const Contact = () => {
 	const formRef = useRef<HTMLFormElement>(null);
 
-	const [form, setForm] = useState({
-		name: "",
-		email: "",
-		message: "",
-	});
-
+	const [form, setForm] = useState({ name: "", email: "", message: "" });
 	const [loading, setLoading] = useState(false);
+	// "idle" | "success" | "error"
+	const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
 	) => {
 		const { name, value } = e.target;
-		setForm({ ...form, [name]: value });
+		setForm((prev) => ({ ...prev, [name]: value }));
 	};
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setLoading(true);
+		setStatus("idle");
+
 		emailjs
 			.send(
-				"service_91ssn8g",
-				"template_jjegxdr",
+				"service_y366iq1",   // your EmailJS Service ID
+				"template_wci2gkt",  // your EmailJS Template ID
 				{
 					from_name: form.name,
 					to_name: "Nicole Thiessen",
@@ -38,22 +37,17 @@ const Contact = () => {
 					to_email: "nicole.d.thiessen@gmail.com",
 					message: form.message,
 				},
-				"VeFeVdEHL9F9_i6xp",
+				"Avt5QfjJFc5zGGi_H", // your EmailJS Public Key
 			)
 			.then(() => {
 				setLoading(false);
-				alert(
-					"A humble thanks for reaching me out. I will respond to you as soon as possible.",
-				);
-				setForm({
-					name: "",
-					email: "",
-					message: "",
-				});
+				setStatus("success");
+				setForm({ name: "", email: "", message: "" });
 			})
 			.catch((error) => {
+				console.error("EmailJS error:", error);
 				setLoading(false);
-				alert("Sorry!! Something went wrong!!");
+				setStatus("error");
 			});
 	};
 
@@ -65,6 +59,7 @@ const Contact = () => {
 			>
 				<p className="heroSubText">Get in Touch</p>
 				<h3 className="heroHeadText">Contact.</h3>
+
 				<form
 					ref={formRef}
 					onSubmit={handleSubmit}
@@ -77,10 +72,12 @@ const Contact = () => {
 							name="name"
 							value={form.name}
 							onChange={handleChange}
-							placeholder="Whats's your name?"
+							placeholder="What's your name?"
+							required
 							className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
 						/>
 					</label>
+
 					<label className="flex flex-col">
 						<span className="text-white font-medium mb-4">Your Email.</span>
 						<input
@@ -88,10 +85,12 @@ const Contact = () => {
 							name="email"
 							value={form.email}
 							onChange={handleChange}
-							placeholder="Whats's your email?"
+							placeholder="What's your email?"
+							required
 							className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
 						/>
 					</label>
+
 					<label className="flex flex-col">
 						<span className="text-white font-medium mb-4">Your Message.</span>
 						<textarea
@@ -100,17 +99,41 @@ const Contact = () => {
 							value={form.message}
 							onChange={handleChange}
 							placeholder="What do you want to say?"
+							required
 							className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
 						/>
 					</label>
-					<button
-						type="submit"
-						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-					>
-						{loading ? "Sending..." : "Sent"}
-					</button>
+
+					<div className="flex flex-col gap-3">
+						<button
+							type="submit"
+							disabled={loading}
+							className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl disabled:opacity-60 disabled:cursor-not-allowed"
+						>
+							{loading ? "Sending..." : "Send"}
+						</button>
+
+						{/* Inline status messages — no jarring alert() popups */}
+						{status === "success" && (
+							<p className="text-[14px]" style={{ color: "#38ef7d" }}>
+								Message sent — I'll get back to you as soon as possible!
+							</p>
+						)}
+						{status === "error" && (
+							<p className="text-[14px]" style={{ color: "#fc6767" }}>
+								Something went wrong. Please try emailing me directly at{" "}
+								<a
+									href="mailto:nicole.d.thiessen@gmail.com"
+									className="underline"
+								>
+									nicole.d.thiessen@gmail.com
+								</a>
+							</p>
+						)}
+					</div>
 				</form>
 			</motion.div>
+
 			<motion.div
 				variants={slideIn("right", "tween", 0.2, 1)}
 				className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"

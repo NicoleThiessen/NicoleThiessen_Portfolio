@@ -47,20 +47,24 @@ const About = () => {
 		<>
 			<motion.div variants={textVariant()}>
 				<p className="sectionSubText">Introduction</p>
-				<h2 className="styles.sectionHeadText">Overview.</h2>
+				<h2 className="sectionHeadText">About Me.</h2>
 			</motion.div>
 
 			<motion.p
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
 			>
-			First-year Mechatronics Engineering student at the University of Waterloo with a passion for artificial intelligence and climate-focused engineering solutions. I’ve built hands-on experience through neural network projects and hackathons, and developed a strong engineering foundation through an internship at an automotive engineering patent company and my work with the UW Formula Electric design team.
+			Mechatronics Engineering student at the University of Waterloo with a love for creative design challenges and climate-focused engineering projects. Somethings I love building include high voltage batteries, neural networks and race cars. I also enjoy taking cars apart, as my previous interships were in automotive hardware and CAN bus reverse engineering. My strengths lie in my creativity, my problem solving and my passion for learning and becoming a better engineer.
+			
 			</motion.p>
+			{/*
 			<div className="mt-20 flex flex-wrap gap-10">
 				{services.map((service, index) => (
 					<ServiceCard key={service.title} index={index} {...service} />
 				))}
 			</div>
+			*/}
+			
 		</>
 	);
 };
