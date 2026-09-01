@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+public/26_V100_Full_Vehicle_Assembly.glb
+public/26_V100_Full_Vehicle_Assembly-optimized.glb

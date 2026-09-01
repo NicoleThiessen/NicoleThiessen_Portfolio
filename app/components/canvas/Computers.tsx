@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
-	const computer = useGLTF("/desktop_pc/scene.gltf");
+	const computer = useGLTF("/26_V100_Full_Vehicle_Assembly-optimized-optimized.glb");
 	return (
 		<mesh>
 			<hemisphereLight intensity={0.15} groundColor="black" />
@@ -20,9 +20,9 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
 			/>
 			<primitive
 				object={computer.scene}
-				scale={isMobile ? 0.7 : 0.75}
-				position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-				rotation={[-0.01, -0.2, -0.1]}
+				scale={isMobile ? 0.7 : 4}
+				position={isMobile ? [0, -3, -2.2] : [0, -3.0, 0]}
+				rotation={[Math.PI / 2, 0, 1]}
 			/>
 		</mesh>
 	);

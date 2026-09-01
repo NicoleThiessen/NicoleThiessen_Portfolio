@@ -41,16 +41,6 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<Link href="https://github.com/NicoleThiessen">
-						<Image
-							src="/logo.png"
-							width={80}
-							height={80}
-							alt="logo"
-							priority
-							className="object-contain"
-						/>
-					</Link>
 					<p className="text-white text-[18px] font-bold cursor-pointer flex">
 						Nicole &nbsp; <span className="sm:block hidden ">| Mechtronics</span>
 					</p>

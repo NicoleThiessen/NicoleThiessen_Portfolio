@@ -146,11 +146,11 @@ const projects: {
 	)[];
 }[] = [
  
-	// ── FSAE: Accumulator Electronics ─────────────────────────────────────────
+		// ── FSAE: Accumulator Electronics 2026 ─────────────────────────────────────────
 	{
-		name: "Accumulator Electronics",
+		name: "2026 Accumulator Electronics",
 		description:
-			"Integrated the complete electrical system for the Formula Electric accumulator, wiring and validating the high-voltage electronics shelf for a 504V battery pack.",
+			"Integrated the complete electrical system for the Formula Electric accumulator, assiting in wiring and validating the high-voltage electronics shelf for a 504V battery pack.",
 		tags: [
 			{ name: "High Voltage", color: "orange-text-gradient" },
 			{ name: "Wire Harness", color: "blue-text-gradient" },
@@ -164,7 +164,7 @@ const projects: {
 			{
 				type: "text",
 				value:
-					"Integrated the complete electrical system for the Formula Electric accumulator, wiring and validating the high-voltage electronics shelf while gaining hands-on experience with high-voltage architecture, system integration, and electrical debugging. The lessons learned throughout manufacturing and competition are now directly driving the redesign that I will lead next season.",
+					"Integrated the complete electrical system for the Formula Electric accumulator, assiting in wiring and validating the high-voltage electronics shelf while gaining hands-on experience with high-voltage architecture, system integration, and electrical debugging. The lessons learned throughout manufacturing and competition are now directly driving the redesign that I will lead next season.",
 			},
 			{ type: "heading", value: "What I Did" },
 			{
@@ -176,13 +176,7 @@ const projects: {
 			{
 				type: "text",
 				value:
-					"When I joined the team as a first-year student, I knew almost none of these systems. My first weeks were spent learning how the accumulator actually functioned — how the shutdown loop propagated through the car, how precharge safely energized the inverter, why bleed resistors were required, how the IMD monitored insulation faults, and how every subsystem interacted within a 504V battery pack.",
-			},
-			{ type: "image", src: "/projectimg/eshelfcad.png", alt: "CAD of 2026 E-Shelf"},
-			{
-				type: "text",
-				value:
-					"Once the design was finalized, I helped manufacture the electronics shelf from the ground up. I assembled nearly the entire wiring harness, completing close to 200 crimps while routing, sheathing, heat shrinking, soldering, and packaging both the high-voltage and low-voltage wiring. Every connection had to satisfy Formula SAE electrical rules governing:",
+					"In my first year on UWFE, I helped put together the electronics shelf from the ground up. I assembled wire harnesses, learning all about crimping, sheathing, heat shrinking, soldering, and packaging both the high-voltage and low-voltage wiring. Every connection had to satisfy Formula SAE electrical rules governing:",
 			},
 			{
 				type: "bullets",
@@ -191,6 +185,12 @@ const projects: {
 					"Positive locking connector features",
 					"HV/LV isolation requirements",
 				],
+			},
+			{ type: "image", src: "/projectimg/eshelfcad.png", alt: "CAD of 2026 E-Shelf"},
+			{
+				type: "text",
+				value:
+					"When I joined the team, I knew almost none of these systems. This task taught me how to accumulator really functioned, from how precharge safely energized the inverter, to how the IMD monitored insulation faults, and how every subsystem interacted within a 504V battery pack.",
 			},
 			{ type: "image", src: "/projectimg/eshelfholding.jpeg", alt: "Working on the TSAL DCDC Wiring"},
 
@@ -224,7 +224,7 @@ const projects: {
 			{
 				type: "text",
 				value:
-					"Following the season, I was selected as Responsible Engineer for next year's electronics shelf. Working alongside one other engineer, I am now leading the redesign of the accumulator's electrical architecture — including the complete HV and LV wiring harnesses, shutdown loop, component packaging, and integration strategy. Nearly every major design decision is being informed by the integration challenges, failures, and lessons learned from this year's car.",
+					"Following the season, I was selected as Responsible Engineer for next year's electronics shelf. Working alongside one other engineer, I am now leading the redesign of the accumulator's electrical architecture — including the complete HV and LV wiring harnesses, shutdown loop, component packaging, and integration strategy. Nearly every major design decision is being informed by the integration challenges, failures, and lessons learned from this year's car. Further details can be found in my 2027 project card.",
 			},
 			{ type: "heading", value: "What I Learned" },
 			{
@@ -236,6 +236,61 @@ const projects: {
 				type: "text",
 				value:
 					"More than anything, this project reinforced why I enjoy engineering. Some of my best memories from first year came from working alongside the team late into the night, solving problems that none of us had seen before, and then arriving at competition surrounded by hundreds of people equally passionate about building race cars.",
+			},
+		],
+	},
+
+	// ── FSAE: Accumulator Electronics 2027 ─────────────────────────────────────────
+	{
+		name: "2027 Accumulator Electronics",
+		description:
+		"I am the Responsible Engineer for all electrical integration within the 2027 accumulator. I am redesigning the pack wiring and electrical systems to address issues identified in the 2026 pack.",
+		tags: [
+			{ name: "Electromechnical Design", color: "orange-text-gradient" },
+			{ name: "CAD", color: "blue-text-gradient" },
+			{ name: "FSAE", color: "green-text-gradient" },
+		],
+		image: "/projectimg/eshelf2027cad.png",
+		platform: "Vercel",
+		deploy_link: "https://www.uwfsae.ca/",
+		content: [
+			{ type: "heading", value: "Overview" },
+			{
+				type: "text",
+				value:
+			"I am the Responsible Engineer for all electrical integration within the 2027 accumulator. I am redesigning the pack wiring and electrical systems to address issues identified in the 2026 pack.",
+			},
+			{ type: "heading", value: "What I Did" },
+			{
+				type: "text",
+				value:
+					"I am in the prototyping phase of the redesign. I documented the major issues with the previous year's pack and identified critical improvements for the 2027 model. I reviewed rules compliance and began developing numerous sketches and rough CAD models.",
+			},
+			{
+				type: "bullets",
+				items: [
+					"Connectors on the ceiling causing poor wire strain relief and crimp failure",
+					"Poor servicability and visibility due to the nature of the 2026 design",
+					"No preplanned wire routing and thus poor organization and isolation",
+				],
+			},
+			{
+				type: "text",
+				value:
+					"Here are some of my rough sketches and CAD models : ",
+			},
+			{ type: "image", src: "/projectimg/eshelfsketch.png", alt: "An Example Sketch"},
+			{ type: "image", src: "/projectimg/eshelf2027cad.png", alt: "Rough CAD of 2027 E-Shelf"},
+			{
+				type: "text",
+				value:
+					"My plans are to address strain relief issues by repositioning the connectors and adding P-clamps to secure the wire harnesses. I also plan to move toward heat shrink rather than sheathing and establish better knowledge transfer around proper crimping practices. I have made the contactor bolts more accessible in recent designs and begun optimizing wire routing by designing custom fuseboard PCBs in Altium.",
+			},
+			{ type: "heading", value: "What I Learned" },
+			{
+				type: "text",
+				value:
+					"This has been the most technically challenging project I have taken on so far, with the real stakes involved in designing and working with high-voltage systems. I have enjoyed solving problems and developing creative solutions to real issues we have encountered with the pack. While the project is still in its early stages, I have begun learning about the tradeoffs between serviceability, reliability, and performance. I have gained experience with PCB design and learned professional wire harnessing practices through studying IPC/WHMA guidelines. Most importantly, I have developed my own design intuition, something I look forward to continuing to build on.",
 			},
 		],
 	},
@@ -300,7 +355,7 @@ const projects: {
 			{
 				type: "text",
 				value:
-					"Four of us on the battery team suddenly found ourselves rebuilding segments against the clock. We split into shifts, often spot welding until three or four in the morning after classes, trying to manufacture replacement segments before leaving for Michigan. Thankfully, we had the foresight months earlier to epoxy several spare cell assemblies during initial manufacturing, which ultimately saved the project. Even then, we only had two spare segments, so we had to get creative — at one point literally freezing completed battery segments so the epoxy became brittle enough to chip away and recover usable cells.",
+					"Four of us on the battery team suddenly found ourselves rebuilding segments against the clock. We split into shifts, often spot welding until three or four in the morning after classes, trying to manufacture replacement segments before leaving for Michigan. Thankfully, we had the foresight months earlier to epoxy several spare cell assemblies during initial manufacturing. Even then, we spent hours root causing the failures in the segments",
 			},
 			{
 				type: "text",
@@ -1104,6 +1159,66 @@ const projects: {
 			},
 		],
 	},
+		// ── Hackathon: Jarvis ─────────────────────────────────────────────────────
+	{
+		name: "Baymax AI: Your Personal Mental Healthcare Companion",
+
+		description:
+			"An AI-powered mental wellness companion featuring an interactive 3D Baymax, journaling, mood tracking, breathing exercises, and personalized conversations.",
+
+		tags: [
+			{ name: "Frontend", color: "blue-text-gradient" },
+			{ name: "LLM", color: "green-text-gradient" },
+			{ name: "Spline 3D", color: "orange-text-gradient" },
+		],
+
+		image: "/projectimg/baymaxcover.png",
+
+		source_code_link:
+			"https://github.com/NicoleThiessen/Baymax---Your-Mental-Health-Companion",
+
+		platform: "Railway",
+
+		deploy_link:
+			"https://youtu.be/ZRWdxQo-w40?si=0R-hLenX9S2jdxeV",
+
+		content: [
+
+			{ type: "heading", value: "Overview" },
+
+			{
+				type: "text",
+				value:
+					"Baymax AI is a mental wellness chatbot inspired by Baymax from Big Hero 6. Users can chat about their emotions, journal, track their mood and stress, explore journaling prompts, and follow breathing exercises with an interactive 3D Baymax.",
+			},
+
+			{ type: "image", src: "/projectimg/baymaxmood.png", alt: "Image of Baymax Mood Tracking Feature" },
+
+			{
+				type: "text",
+				value:
+					"I built this as my first hackathon project to explore frontend development and learn how to bring together AI, APIs, UI design, and 3D web elements. I designed the initial UI in Figma, built the site in Bolt, integrated OpenRouter and Mistral for the chatbot, and created Baymax in Spline.",
+			},
+
+			{ type: "image", src: "/projectimg/baymaxmodel.png", alt: "Image of Baymax Modeling" },
+
+			{ type: "heading", value: "What I Learned" },
+
+			{
+				type: "text",
+				value:
+					"This project taught me the fundamentals of building and deploying a full web application, including frontend development, API integration, server-side API security, LLM prompting, and 3D web design.",
+			},
+
+			{
+				type: "text",
+				value:
+					"It was also my first experience taking an idea from design to a working product on a tight deadline, and gave me a much stronger interest in building interactive software.",
+			},
+
+		],
+	},
+ 
  ];
 	
 	export { services, technologies, experiences, testimonials, projects };
