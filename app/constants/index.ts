@@ -1177,7 +1177,7 @@ const projects: {
 		source_code_link:
 			"https://github.com/NicoleThiessen/Baymax---Your-Mental-Health-Companion",
 
-		platform: "Railway",
+		platform: "Vercel",
 
 		deploy_link:
 			"https://youtu.be/ZRWdxQo-w40?si=0R-hLenX9S2jdxeV",
