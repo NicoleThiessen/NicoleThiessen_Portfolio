@@ -57,7 +57,7 @@ const About = () => {
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
 			>
-			I'm currently studying Mechatronics Engineering at the University of Waterloo. Through internships in automotive PCB analysis and EV CAN bus reverse engineering, I've learned to break down complex systems and think carefully about how and why things are designed the way they are. That analytical curiosity carries into my projects too, from building a high-voltage battery pack with my Formula Electric team to prototyping whatever's on my mind with an Arduino kit. I love diving into electromechanical design challenges, and I thrive when I'm handed problems I don't yet know how to solve.
+			I&apos;m currently studying Mechatronics Engineering at the University of Waterloo. Through internships in automotive PCB analysis and EV CAN bus reverse engineering, I&apos;ve learned to break down complex systems and think carefully about how and why things are designed the way they are. That analytical curiosity carries into my projects too, from building a high-voltage battery pack with my Formula Electric team to prototyping whatever&apos;s on my mind with an Arduino kit. I love diving into electromechanical design challenges, and I thrive when I&apos;m handed problems I don&apos;t yet know how to solve.
 			</motion.p>
 			</motion.p>
 			{/*
